@@ -1,4 +1,5 @@
-# sakai-vue
+# isatex-vue-app
+### [Based on Sakai admin dashboard](https://github.com/primefaces/sakai-vue)
 
 This template should help get you started developing with Vue 3 in Vite.
 
