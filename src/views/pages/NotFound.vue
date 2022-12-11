@@ -16,17 +16,17 @@ import AppConfig from '@/layout/AppConfig.vue';
                             <i class="text-50 pi pi-fw pi-table text-2xl"></i>
                         </span>
                         <span class="ml-4 flex flex-column">
-                            <span class="text-900 lg:text-xl font-medium mb-0 block">Frequently Asked Questions</span>
-                            <span class="text-600 lg:text-xl">Ultricies mi quis hendrerit dolor.</span>
+                            <span class="text-900 lg:text-xl font-medium mb-0 block">Home</span>
+                            <span class="text-600 lg:text-xl">Go back to dashboard/home page</span>
                         </span>
                     </router-link>
-                    <router-link to="/" class="w-full flex align-items-center py-5 border-300 border-bottom-1">
+                    <router-link to="/auth/login" class="w-full flex align-items-center py-5 border-300 border-bottom-1">
                         <span class="flex justify-content-center align-items-center bg-orange-400 border-round" style="height: 3.5rem; width: 3.5rem">
                             <i class="pi pi-fw pi-question-circle text-50 text-2xl"></i>
                         </span>
                         <span class="ml-4 flex flex-column">
-                            <span class="text-900 lg:text-xl font-medium mb-0">Solution Center</span>
-                            <span class="text-600 lg:text-xl">Phasellus faucibus scelerisque eleifend.</span>
+                            <span class="text-900 lg:text-xl font-medium mb-0">Login</span>
+                            <span class="text-600 lg:text-xl">If you are not logged in you have to login first</span>
                         </span>
                     </router-link>
                     <router-link to="/" class="w-full flex align-items-center mb-5 py-5 border-300 border-bottom-1">
@@ -34,8 +34,8 @@ import AppConfig from '@/layout/AppConfig.vue';
                             <i class="pi pi-fw pi-unlock text-50 text-2xl"></i>
                         </span>
                         <span class="ml-4 flex flex-column">
-                            <span class="text-900 lg:text-xl font-medium mb-0">Permission Manager</span>
-                            <span class="text-600 lg:text-xl">Accumsan in nisl nisi scelerisque</span>
+                            <span class="text-900 lg:text-xl font-medium mb-0">Missing Permissions</span>
+                            <span class="text-600 lg:text-xl">Maybe you don't have the permission to access this route</span>
                         </span>
                     </router-link>
                 </div>
