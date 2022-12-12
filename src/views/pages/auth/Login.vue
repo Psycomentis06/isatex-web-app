@@ -60,7 +60,7 @@ const login = () => {
 
                     <div>
                         <label for="email1" class="block text-900 text-xl font-medium mb-2">Email or Username</label>
-                        <InputText id="email1" type="text" placeholder="eg, user or user@mail.com" class="w-full md:w-30rem mb-5" style="padding: 1rem" v-model="email" />
+                        <InputText id="email1" type="text" placeholder="eg, user or user@mail.com" class="w-full mb-5" style="padding: 1rem" v-model="email" />
 
                         <label for="password1" class="block text-900 font-medium text-xl mb-2">Password</label>
                         <Password id="password1" v-model="password" placeholder="Password" :toggleMask="true" class="w-full mb-3" inputClass="w-full" inputStyle="padding:1rem"></Password>
