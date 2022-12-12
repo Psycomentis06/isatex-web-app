@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { config } from '../service/config'
 
 import AppMenuItem from './AppMenuItem.vue';
 
@@ -162,6 +163,59 @@ const model = ref([
         ]
     }
 ]);
+
+onMounted(() => {
+    if (!config['show-all-routes']) {
+        model.value = [{
+            label: 'Home',
+            items: [
+                { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
+        },
+        {
+            label: 'Management',
+            items: [
+                {
+                    label: 'Product', icon: 'pi pi-fw pi-file', to: '/product', items: [
+                        {
+                            label: 'Products',
+                            icon: 'pi pi-fw pi-file',
+                            to: '/admin/product'
+                        },
+                        {
+                            label: 'Categories',
+                            icon: 'pi pi-fw pi-plus',
+                            to: '/admin/product/category'
+                        },
+                    ]
+                },
+                {
+                    label: 'Batch', icon: 'pi pi-fw pi-database', to: '/admin/batch'
+                },
+                { label: 'Machine', icon: 'pi pi-fw pi-server', to: '/admin/machine' },
+                { label: 'Employee', icon: 'pi pi-fw pi-user', to: '/admin/employee' },
+                { label: 'Fabrication Order', icon: 'pi pi-fw pi-briefcase', to: '/admin/fo' },
+
+            ]
+            },
+            {
+                label: 'Customer Space',
+                items: [
+                    {
+                        label: 'Dashboard',
+                        icon: 'pi pi-fw pi-home',
+                        to: '/dashboard',
+                    },
+                    {
+                        label: 'Fabrication Order',
+                        icon: 'pi pi-fw pi-bookmark',
+                    to: '/fo'
+                }
+            ]
+        }
+
+        ]
+    }
+})
 </script>
 
 <template>
@@ -170,12 +224,9 @@ const model = ref([
             <app-menu-item v-if="!item.separator" :item="item" :index="i"></app-menu-item>
             <li v-if="item.separator" class="menu-separator"></li>
         </template>
-        <li>
-            <a href="https://www.primefaces.org/primeblocks-vue/#/" target="_blank">
-                <img src="/layout/images/banner-primeblocks.png" alt="Prime Blocks" class="w-full mt-3" />
-            </a>
-        </li>
     </ul>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>
